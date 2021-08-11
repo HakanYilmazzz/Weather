@@ -1,5 +1,5 @@
 const api = {
-  key: "YOUR_API_KEY",
+  key: "5397443a198bdd97e5e5f998fe8befbc", //Your api key 
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
