@@ -50,6 +50,31 @@ function displayResults (weather) {
 
   let hilow = document.querySelector('.hi-low');
   hilow.innerText = `${Math.round(weather.main.temp_min)}°C / ${Math.round(weather.main.temp_max)}°C`;
+
+  console.log(weather.weather[0].main)
+
+  if (weather.weather[0].main=='Clear'){
+    document.body.style.backgroundImage="url('./Assets/clear.jpg')";
+  }
+  else if(weather.weather[0].main=='Thunderstorm'){
+    document.body.style.backgroundImage="url('./Assets/thunderstrom.jpg')";
+  }
+  else if(weather.weather[0].main=='Snow'){
+    document.body.style.backgroundImage="url('./Assets/snow.jpg')";
+  }
+  else if(weather.weather[0].main=='Clouds'){
+    console.log("girdi")
+    document.body.style.backgroundImage="url('./Assets/clouds.jpg')";
+  }
+  else if(weather.weather[0].main=='Rain'){
+    document.body.style.backgroundImage="url('./Assets/rain.jpg')";
+  }
+  else if(weather.weather[0].main=='Drizzle'){
+    document.body.style.backgroundImage="url('./Assets/drizzle.jpg')";
+  }
+  else {
+    document.body.style.backgroundImage="url('./Assets/atmosphere.jpg')";
+  }
 }
 
 function dateBuilder (d) {
